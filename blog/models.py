@@ -6,8 +6,8 @@ class Author(models.Model):
     fio = models.CharField(max_length=200)
     email = models.EmailField()
     # password = models.Fie
-    def __str__(self):
-        return self.fio    
+    # def __str__(self):
+    #     return self.fio    
 
 class Blog(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -16,5 +16,5 @@ class Blog(models.Model):
     datetimecreate = models.DateTimeField()
     author = models.ForeignKey('Author', on_delete=models.PROTECT)
 
-    def __str__(self):
-        return self.theme + self.id
+    # def __str__(self):
+    #     return self.theme + self.id

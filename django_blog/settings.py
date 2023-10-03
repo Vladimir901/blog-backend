@@ -143,7 +143,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = False   # Обязательный параметр !!!
-# CORS_ORIGIN_WHITELIST = (
-#        'https://localhost:3000',
-#        'https://localhost:5173',
-# )
+CORS_ORIGIN_WHITELIST = (
+       'http://localhost:3000',
+       'http://localhost:5173',
+)
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+)
